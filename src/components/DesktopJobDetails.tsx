@@ -45,7 +45,7 @@ export default function DesktopJobDetails({ job }: Props) {
             <p className="text-primary-blue font-bold">{job.location}</p>
           </div>
           <div>
-            <Button name="Apply Now" />
+            <Button name="Apply Now" onClick={() => {}} />
           </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function DesktopJobDetails({ job }: Props) {
           <p className="text-secondary-dark-grey">So Digital Inc.</p>
         </div>
         <div>
-          <Button name="Apply Now" />
+          <Button name="Apply Now" onClick={() => {}} />
         </div>
       </div>
     </div>

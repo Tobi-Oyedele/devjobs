@@ -44,7 +44,7 @@ export default function MobileJobDetails({ job }: Props) {
             <p className="text-primary-blue font-bold">{job.location}</p>
           </div>
           <div>
-            <Button name="Apply Now" />
+            <Button name="Apply Now" onClick={() => {}} />
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export default function MobileJobDetails({ job }: Props) {
 
       {/*Footer content*/}
       <div className="bg-white mt-6 flex justify-center p-4 rounded-xl">
-        <Button name="Apply Now" />
+        <Button name="Apply Now" onClick={() => {}} />
       </div>
     </div>
   );
