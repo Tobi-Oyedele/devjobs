@@ -87,7 +87,13 @@ const MobileSearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             Full Time Only
           </label>
           {/* Search button */}
-          <Button name="Search" />
+          <Button
+            name="Search"
+            onClick={() => {
+              console.log("Search triggered", { title, location });
+              onSearch(title, location, filters.fullTimeOnly);
+            }}
+          />
         </div>
       </Modal>
     </>
