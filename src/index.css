@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-kumbh: "Kumbh Sans", "sans-serif";
+
+  --color-button-background: #c9c9c9;
+  --color-background: #f4f6f8;
+  --color-secondary-gray: #9daec2;
+  --color-secondary-dark-grey: #6e8098;
+
+  --color-primary-blue: #5964e0;
+  --color-primary-violet: #9e7f66;
+  --color-primary-light-violet: #939bf4;
+
+  --color-dark-mode: #19202d;
+  --color-light-mode: #ffffff;
+  --color-midnight: #121721;
+}
+
+body {
+  @apply font-kumbh;
+}
