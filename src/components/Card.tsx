@@ -1,32 +1,6 @@
 import type React from "react";
 import { useNavigate } from "react-router-dom";
-import scootLogo from "../assets/logos/scoot.svg";
-import blogrLogo from "../assets/logos/blogr.svg";
-import vectorLogo from "../assets/logos/vector.svg";
-import officeLiteLogo from "../assets/logos/officelite.svg";
-import podLogo from "../assets/logos/pod.svg";
-import creativeLogo from "../assets/logos/creative.svg";
-import pomodoroLogo from "../assets/logos/pomodoro.svg";
-import makerLogo from "../assets/logos/maker.svg";
-import coffeeroastersLogo from "../assets/logos/coffeeroasters.svg";
-import mastercraftLogo from "../assets/logos/mastercraft.svg";
-import crowFundLogo from "../assets/logos/crowdfund.svg";
-import typeMasterLogo from "../assets/logos/typemaster.svg";
-
-const logoMap: { [key: string]: string } = {
-  "scoot.svg": scootLogo,
-  "blogr.svg": blogrLogo,
-  "vector.svg": vectorLogo,
-  "officelite.svg": officeLiteLogo,
-  "pod.svg": podLogo,
-  "creative.svg": creativeLogo,
-  "pomodoro.svg": pomodoroLogo,
-  "maker.svg": makerLogo,
-  "coffeeroasters.svg": coffeeroastersLogo,
-  "mastercraft.svg": mastercraftLogo,
-  "crowdfund.svg": crowFundLogo,
-  "typemaster.svg": typeMasterLogo,
-};
+import Logo from "./Logo";
 
 interface CardProps {
   key: number;
@@ -50,21 +24,18 @@ const Card: React.FC<CardProps> = ({
   contract,
   location,
 }) => {
-  const resolvedLogo = logoMap[logo];
   const navigate = useNavigate();
 
   return (
     <div className="px-3 py-5 lg:px-4 lg:py-6">
-      <div className="bg-white rounded-md px-5 pb-5 flex flex-col gap-2.5">
-        <div
-          className="size-12.5 grid place-items-center rounded-xl relative -translate-y-1/2"
-          style={{ backgroundColor: logoBackground }}
-        >
-          {resolvedLogo ? (
-            <img src={resolvedLogo} alt={`${company} logo`} />
-          ) : (
-            <div className="text-red-500">Logo not found</div>
-          )}
+      <div className="bg-white rounded-md px-5 pb-5 flex flex-col gap-2.5 mx-8 md:mx-0">
+        <div>
+          <Logo
+            logo={logo}
+            logoBackground={logoBackground}
+            company={company}
+            className="size-12.5 grid place-items-center rounded-xl relative -translate-y-1/2"
+          />
         </div>
 
         <div>

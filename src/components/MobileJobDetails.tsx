@@ -11,7 +11,6 @@ export default function MobileJobDetails({ job }: Props) {
   return (
     <div className="md:hidden">
       <div className="bg-white grid place-items-center relative -mt-6 pb-6 rounded-lg mx-4">
-        <div></div>
         <Logo
           logo={job.logo}
           logoBackground={job.logoBackground}

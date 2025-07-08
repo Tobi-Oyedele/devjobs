@@ -1,4 +1,3 @@
-// JobLogo.tsx
 import scootLogo from "../assets/logos/scoot.svg";
 import blogrLogo from "../assets/logos/blogr.svg";
 import vectorLogo from "../assets/logos/vector.svg";
